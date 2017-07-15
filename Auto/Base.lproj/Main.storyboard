@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Auto View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Auto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AutoViewController" customModule="Auto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,6 +39,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QeK-b3-LVT">
                                 <rect key="frame" x="16" y="103" width="343" height="167"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7o-cR-zq3" userLabel="Switch1">
+                                <rect key="frame" x="270" y="278" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m88-nQ-xZk" userLabel="Switch2">
+                                <rect key="frame" x="270" y="313" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-wY-WII" userLabel="Switch3">
+                                <rect key="frame" x="270" y="352" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d6-cL-8d7" userLabel="Switch4">
+                                <rect key="frame" x="270" y="391" width="51" height="31"/>
+                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ad-fG-XLz">
                                 <rect key="frame" x="172" y="496" width="30" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,26 +58,17 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="okButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXc-kj-BgQ"/>
+                                </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7o-cR-zq3">
-                                <rect key="frame" x="270" y="278" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m88-nQ-xZk">
-                                <rect key="frame" x="270" y="313" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-wY-WII">
-                                <rect key="frame" x="270" y="352" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d6-cL-8d7">
-                                <rect key="frame" x="270" y="391" width="51" height="31"/>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Коврики" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6W-77-oeg">
                                 <rect key="frame" x="135" y="286" width="119" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Защита картера" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-mH-DfR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" text="Защита картера" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-mH-DfR">
                                 <rect key="frame" x="135" y="321" width="119" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -122,7 +125,7 @@
                             <constraint firstItem="mSG-nl-LyO" firstAttribute="top" secondItem="0bK-g5-93H" secondAttribute="bottom" constant="15" id="E5p-Lm-OTy"/>
                             <constraint firstItem="a7Y-z6-yHL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="G9D-8l-Crl"/>
                             <constraint firstItem="Eck-x9-WLF" firstAttribute="trailing" secondItem="C6W-77-oeg" secondAttribute="trailing" id="GaO-b1-M3d"/>
-                            <constraint firstItem="C6W-77-oeg" firstAttribute="top" secondItem="QeK-b3-LVT" secondAttribute="bottom" constant="16" id="HMY-pD-Tgl"/>
+                            <constraint firstItem="C6W-77-oeg" firstAttribute="top" secondItem="QeK-b3-LVT" secondAttribute="bottom" constant="-17" id="HMY-pD-Tgl"/>
                             <constraint firstItem="1BT-eI-HvK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="HMZ-W3-IJ6"/>
                             <constraint firstItem="P9u-wY-WII" firstAttribute="leading" secondItem="Eck-x9-WLF" secondAttribute="trailing" constant="16" id="Hbt-HL-TOg"/>
                             <constraint firstItem="QeK-b3-LVT" firstAttribute="top" secondItem="Zfw-cg-jlD" secondAttribute="bottom" constant="8" id="IIc-1s-Oj5"/>
@@ -138,7 +141,7 @@
                             <constraint firstItem="4d6-cL-8d7" firstAttribute="top" secondItem="P9u-wY-WII" secondAttribute="bottom" constant="8" id="WxJ-ap-0Kf"/>
                             <constraint firstItem="kYH-6s-r8R" firstAttribute="trailing" secondItem="C6W-77-oeg" secondAttribute="trailing" id="YH6-bo-we1"/>
                             <constraint firstItem="GbC-uw-kTU" firstAttribute="trailing" secondItem="1BT-eI-HvK" secondAttribute="trailing" id="Z5Q-Be-6C1"/>
-                            <constraint firstItem="K7o-cR-zq3" firstAttribute="top" secondItem="QeK-b3-LVT" secondAttribute="bottom" constant="8" id="eF0-05-EvJ"/>
+                            <constraint firstItem="K7o-cR-zq3" firstAttribute="top" secondItem="QeK-b3-LVT" secondAttribute="bottom" constant="-25" id="eF0-05-EvJ"/>
                             <constraint firstItem="m88-nQ-xZk" firstAttribute="leading" secondItem="ASu-mH-DfR" secondAttribute="trailing" constant="16" id="eZ7-GO-RGu"/>
                             <constraint firstItem="Zfw-cg-jlD" firstAttribute="top" secondItem="a7Y-z6-yHL" secondAttribute="bottom" constant="8" id="edh-SH-5VL"/>
                             <constraint firstItem="4d6-cL-8d7" firstAttribute="centerY" secondItem="kYH-6s-r8R" secondAttribute="centerY" id="fb9-Sv-ae8"/>
@@ -159,6 +162,12 @@
                             <constraint firstItem="0bK-g5-93H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="zDS-zZ-XAi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diskSwitch" destination="4d6-cL-8d7" id="cyl-4i-Zia"/>
+                        <outlet property="matsSwitch" destination="K7o-cR-zq3" id="ukb-Au-7aE"/>
+                        <outlet property="protectSwitch" destination="m88-nQ-xZk" id="Ip2-0G-r0y"/>
+                        <outlet property="winterSwith" destination="P9u-wY-WII" id="CEc-fj-upW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
