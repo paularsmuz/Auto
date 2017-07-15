@@ -10,27 +10,24 @@ import Foundation
 
 struct CarKit {
     
-    
     let matsSum: Int
     let protectSum: Int
     let winterSum: Int
     let diskSum: Int
     let discountPercent: Double
-    
-    // let discountSum: Int = 10
 
-   
     
-    func CarTotalSum()->Int {
+    func CarKitSum()->Int {
         
      return (self.matsSum + self.protectSum + self.winterSum + self.diskSum)
     }
     
-    func CarDiscountSum(percent: Double)->Int {
-        let xxx = self.CarTotalSum()
-        return Int(round(Double(xxx) * percent / 100.0))
+    func CarWithoutDiscountSum(percent: Double)->Int {
+        let carKitSum = self.CarKitSum()
+        return carKitSum - Int(round(Double(carKitSum) * percent / 100.0))
     }
-
+    
+    
     
     
 }

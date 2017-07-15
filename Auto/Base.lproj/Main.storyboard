@@ -162,12 +162,6 @@
                             <constraint firstItem="0bK-g5-93H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="zDS-zZ-XAi"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="diskSwitch" destination="4d6-cL-8d7" id="cyl-4i-Zia"/>
-                        <outlet property="matsSwitch" destination="K7o-cR-zq3" id="ukb-Au-7aE"/>
-                        <outlet property="protectSwitch" destination="m88-nQ-xZk" id="Ip2-0G-r0y"/>
-                        <outlet property="winterSwith" destination="P9u-wY-WII" id="CEc-fj-upW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
