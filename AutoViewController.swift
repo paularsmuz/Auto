@@ -33,6 +33,10 @@ class AutoViewController: UIViewController {
     }
     */
     
+    @IBAction func switchChange(_ sender: UISwitch) {
+        _ = sender.isOn
+        
+    }
     
     
     @IBAction func okButton(_ sender: Any) {
@@ -51,11 +55,6 @@ class AutoViewController: UIViewController {
         self.PriceCarKit.text =  "В том числе доп. оборудованиеена: " + "\(priceCarKit)р"
         self.DicountCarKit.text =  "Скидка на доп. оборудование \(discountPercent)%: " + "\(discountSum)р"
         self.PriceTotal.text =  "ИТОГО: " + "\(priceTotal)р"
-/*      print(matsSwitch.setOn)
-        print(protectSwitch.setOn)
-        print(winterSwith.setOn)
-        print(diskSwitch.setOn)
- */
         
         
     }

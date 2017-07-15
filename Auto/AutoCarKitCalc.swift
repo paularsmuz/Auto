@@ -18,6 +18,22 @@ struct CarKit {
 
     func CarKitSum()->Int {
         
+        var carKitSum: Int = 0
+        
+        //   switchChange.isOn == true  ? carKitSum += self.matsSum : carKitSum += 0
+        
+        
+   
+        /* matsSwitch.setOn
+         protectSwitch.setOn
+       winterSwith.setOn
+       diskSwitch.setOn
+         */
+
+      // нужно суммировать не все, а только если преключатель установлен 
+        // но как это узнать в модели
+        
+        
      return (self.matsSum + self.protectSum + self.winterSum + self.diskSum)
     }
     
