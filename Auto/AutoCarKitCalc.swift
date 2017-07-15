@@ -16,7 +16,6 @@ struct CarKit {
     let diskSum: Int
     let discountPercent: Double
 
-    
     func CarKitSum()->Int {
         
      return (self.matsSum + self.protectSum + self.winterSum + self.diskSum)
@@ -26,8 +25,5 @@ struct CarKit {
         let carKitSum = self.CarKitSum()
         return carKitSum - Int(round(Double(carKitSum) * percent / 100.0))
     }
-    
-    
-    
     
 }

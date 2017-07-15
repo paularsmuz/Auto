@@ -30,7 +30,7 @@ class AutoViewController: UIViewController {
         
         let TotalSum = carkit.CarKitSum() + carkit.CarWithoutDiscountSum(percent: 20.0)
 
-        print("Скидка \(TotalSum)")
+        print("Сумма со скидкой: \(TotalSum)")
         
         
 /*      print(matsSwitch.setOn)
