@@ -163,7 +163,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="PriceTotal" destination="1BT-eI-HvK" id="Xvy-eh-wI9"/>
+                        <outlet property="DicountCarKit" destination="0bK-g5-93H" id="jvX-SL-V3W"/>
+                        <outlet property="PriceBase" destination="1BT-eI-HvK" id="XaR-ZM-Fcl"/>
+                        <outlet property="PriceCarKit" destination="GbC-uw-kTU" id="IxY-H3-JnX"/>
+                        <outlet property="PriceTotal" destination="mSG-nl-LyO" id="Qee-zW-cWo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

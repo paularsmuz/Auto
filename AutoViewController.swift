@@ -10,14 +10,18 @@ import UIKit
 
 class AutoViewController: UIViewController {
     
+    
     var carkit = CarKit(matsSum: 2500, protectSum: 1000, winterSum: 30000, diskSum:  50000, discountPercent: 10.0)
   
     
     
+    @IBOutlet weak var PriceBase: UILabel!
+    
+    @IBOutlet weak var PriceCarKit: UILabel!
+    
+    @IBOutlet weak var DicountCarKit: UILabel!
     
     @IBOutlet weak var PriceTotal: UILabel!
-    
-    
     
     /*
     // MARK: - Navigation
@@ -33,15 +37,20 @@ class AutoViewController: UIViewController {
     
     @IBAction func okButton(_ sender: Any) {
         
-        print("Вошли в метод")
+        // print("Вошли в метод")
         
-        let TotalSum = carkit.CarKitSum() + carkit.CarWithoutDiscountSum(percent: 20.0)
+        
+        let baseSum: Int = 440700
+        let discountPercent: Int = 10
 
-        print("Сумма со скидкой: \(TotalSum)")
+        let priceCarKit = self.carkit.CarKitSum()
+        let discountSum = priceCarKit/discountPercent
+        let priceTotal = baseSum + priceCarKit - discountSum
         
-        
-        self.PriceTotal.text =  "Цена в выбранной комплектации: " + "\(TotalSum)"
-        
+        self.PriceBase.text =  "Цена в выбранной комплектации: " + "\(baseSum)р"
+        self.PriceCarKit.text =  "В том числе доп. оборудованиеена: " + "\(priceCarKit)р"
+        self.DicountCarKit.text =  "Скидка на доп. оборудование \(discountPercent)%: " + "\(discountSum)р"
+        self.PriceTotal.text =  "ИТОГО: " + "\(priceTotal)р"
 /*      print(matsSwitch.setOn)
         print(protectSwitch.setOn)
         print(winterSwith.setOn)
