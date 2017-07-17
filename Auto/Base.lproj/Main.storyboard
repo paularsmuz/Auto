@@ -167,6 +167,7 @@
                     </view>
                     <connections>
                         <outlet property="DicountCarKit" destination="0bK-g5-93H" id="jvX-SL-V3W"/>
+                        <outlet property="DiskPriceSwitch" destination="4d6-cL-8d7" id="gu7-ED-R4V"/>
                         <outlet property="MatsPriceSwitch" destination="K7o-cR-zq3" id="Px6-7b-ZIg"/>
                         <outlet property="PriceBase" destination="1BT-eI-HvK" id="XaR-ZM-Fcl"/>
                         <outlet property="PriceCarKit" destination="GbC-uw-kTU" id="IxY-H3-JnX"/>

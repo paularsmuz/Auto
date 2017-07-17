@@ -10,17 +10,20 @@ import UIKit
 
 class AutoViewController: UIViewController {
     
-    
-    var carkit = CarKit(matsSum: 2500, protectSum: 1000, winterSum: 30000, diskSum:  50000, discountPercent: 10.0)
-  
-    
-    
+    let baseSum: Double = 440700
+    let matsSum: Double = 2500
+    let protectSum: Double = 1000
+    let winterSum: Double = 30000
+    let diskSum: Double = 50000
+    let discountPercent: Double = 10
+
     // переключатели
     @IBOutlet weak var MatsPriceSwitch: UISwitch!
     @IBOutlet weak var ProtectPriceSwitch: UISwitch!
     @IBOutlet weak var WinterPriceSwitch: UISwitch!
-    @IBOutlet weak var DiskPriceSwith: UISwitch!
+    // опечатка @IBOutlet weak var DiskPriceSwith: UISwitch!
     
+    @IBOutlet weak var DiskPriceSwitch: UISwitch!
     
     // результаты
     @IBOutlet weak var PriceBase: UILabel!
@@ -40,32 +43,47 @@ class AutoViewController: UIViewController {
     
     @IBAction func switchChange(_ sender: UISwitch) {
         
-        let setting = sender.isOn
-        MatsPriceSwitch.setOn(setting,animated: true)
-        
-        //print("\(sender)")
-        //print("\(MatsPriceSwitch.isOn)")
+        // пересчет делается по кнопке ОК
+        print("\(sender)")
+        print("\(MatsPriceSwitch.isOn)")
+        print("\(ProtectPriceSwitch.isOn)")
+        print("\(WinterPriceSwitch.isOn)")
+        print("\(DiskPriceSwitch.isOn)")
     }
-    
-    
-    
     
     @IBAction func okButton(_ sender: Any) {
         
+        // пересчет делается при нажатии кнопки ОК,
+        // иначе она не нужна на экране
+        
         // print("Вошли в метод")
+        var sumCarKit: Double = 0
+        
+        if MatsPriceSwitch.isOn == true {
+            sumCarKit += matsSum
+        }
+        
+        if ProtectPriceSwitch.isOn == true {
+            sumCarKit += protectSum
+        }
+        
+        if WinterPriceSwitch.isOn == true {
+            sumCarKit += winterSum
+        }
+        
+        if DiskPriceSwitch.isOn == true {
+            sumCarKit += diskSum
+        }
         
         
-        let baseSum: Int = 440700
-        let discountPercent: Int = 10
-
-        let priceCarKit = self.carkit.CarKitSum()
-        let discountSum = priceCarKit/discountPercent
-        let priceTotal = baseSum + priceCarKit - discountSum
+        let discountSum = sumCarKit / discountPercent
         
-        self.PriceBase.text =  "Цена в выбранной комплектации: " + "\(baseSum)р"
-        self.PriceCarKit.text =  "В том числе доп. оборудованиеена: " + "\(priceCarKit)р"
+        let priceTotal = baseSum + sumCarKit - discountSum
+        
+        self.PriceBase.text =  "Базовая цена: " + "\(baseSum)р"
+        self.PriceCarKit.text =  " Дополнительное оборудование: " + "\(sumCarKit)р"
         self.DicountCarKit.text =  "Скидка на доп. оборудование \(discountPercent)%: " + "\(discountSum)р"
-        self.PriceTotal.text =  "ИТОГО: " + "\(priceTotal)р"
+        self.PriceTotal.text =  "Цена в выбранной комплектации: " + "\(priceTotal)р"
         
         
     }
