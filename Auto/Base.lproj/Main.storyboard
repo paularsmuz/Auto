@@ -167,9 +167,12 @@
                     </view>
                     <connections>
                         <outlet property="DicountCarKit" destination="0bK-g5-93H" id="jvX-SL-V3W"/>
+                        <outlet property="MatsPriceSwitch" destination="K7o-cR-zq3" id="Px6-7b-ZIg"/>
                         <outlet property="PriceBase" destination="1BT-eI-HvK" id="XaR-ZM-Fcl"/>
                         <outlet property="PriceCarKit" destination="GbC-uw-kTU" id="IxY-H3-JnX"/>
                         <outlet property="PriceTotal" destination="mSG-nl-LyO" id="Qee-zW-cWo"/>
+                        <outlet property="ProtectPriceSwitch" destination="m88-nQ-xZk" id="ucb-RA-Jeb"/>
+                        <outlet property="WinterPriceSwitch" destination="P9u-wY-WII" id="Kxb-lD-q58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

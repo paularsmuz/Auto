@@ -20,20 +20,33 @@ struct CarKit {
         
         var carKitSum: Int = 0
         
-        //   switchChange.isOn == true  ? carKitSum += self.matsSum : carKitSum += 0
+       // MatsPriceSwitch == true  ? carKitSum += self.matsSum : carKitSum += 0
+            
+       // нужно суммировать не все, а только если преключатель установлен
+        // но как это узнать в модели?
         
+
+  /*    НЕ признает имя из AutViewControll !!!!!
+ 
+        print("\(Switch1.isOn)")
         
-   
+        print("\(MatsPriceSwitch.isOn)")
+        
+        print("\(AutoViewController.MatsPriceSwitch.isOn)")
+
+        
+        print("\(UISwitch.MatsPriceSwitch.isOn)")
+        print("\(UIControl.MatsPriceSwitch.isOn)")
+ 
+        print("\(self.MatsPriceSwitch.isOn)")
+  */
+        
         /* matsSwitch.setOn
          protectSwitch.setOn
        winterSwith.setOn
        diskSwitch.setOn
          */
 
-      // нужно суммировать не все, а только если преключатель установлен 
-        // но как это узнать в модели
-        
-        
      return (self.matsSum + self.protectSum + self.winterSum + self.diskSum)
     }
     

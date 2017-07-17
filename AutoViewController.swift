@@ -15,12 +15,17 @@ class AutoViewController: UIViewController {
   
     
     
+    // переключатели
+    @IBOutlet weak var MatsPriceSwitch: UISwitch!
+    @IBOutlet weak var ProtectPriceSwitch: UISwitch!
+    @IBOutlet weak var WinterPriceSwitch: UISwitch!
+    @IBOutlet weak var DiskPriceSwith: UISwitch!
+    
+    
+    // результаты
     @IBOutlet weak var PriceBase: UILabel!
-    
     @IBOutlet weak var PriceCarKit: UILabel!
-    
     @IBOutlet weak var DicountCarKit: UILabel!
-    
     @IBOutlet weak var PriceTotal: UILabel!
     
     /*
@@ -34,9 +39,15 @@ class AutoViewController: UIViewController {
     */
     
     @IBAction func switchChange(_ sender: UISwitch) {
-        _ = sender.isOn
         
+        let setting = sender.isOn
+        MatsPriceSwitch.setOn(setting,animated: true)
+        
+        //print("\(sender)")
+        //print("\(MatsPriceSwitch.isOn)")
     }
+    
+    
     
     
     @IBAction func okButton(_ sender: Any) {
